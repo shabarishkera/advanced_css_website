@@ -1,0 +1,60 @@
+@import "./abstract/function";
+@import "./abstract/variable";
+@import "./abstract/mixin";
+
+@import "./base/animation";
+@import "./base/base";
+@import "./base/typo";
+@import "./base/util";
+
+@import "./pages/home";
+@import "./components/button";
+@import "./layout/header";
+.logo-box
+{
+position: relative;
+top:4rem;
+left: 5rem;
+}
+.logo
+{
+  height: 3rem;
+}
+.logo:hover
+{
+  animation: moveinleft;
+  animation-duration: 3s;
+}
+.heading-primary
+{
+color: white;
+text-transform: uppercase;
+backface-visibility: hidden;
+&-main{
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing:3.5rem;
+animation-name: moveinleft;
+animation-duration: 3s;
+}
+&-sub
+{
+  display: block;
+  font-size: 2rem;
+  letter-spacing: 1.5rem;
+  animation-name: moveinRight;
+  animation-duration: 3s;
+  animation-delay: 0s;
+  animation-timing-function: ease-in-out;
+}
+}
+
+.text-box
+{
+position: absolute;
+text-align: center;
+top:40%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
