@@ -1,0 +1,43 @@
+.compositon
+{position: relative;
+&__photo{
+width: 55%;
+transition: all .2s;
+box-shadow: 0 13px 20px rgba(0,0,0,.4);
+position: absolute;
+&:hover
+{
+transform: scale(1.05);
+z-index: 10;
+outline: solid $color-primary 1rem;
+outline-offset: 1rem;
+}
+}
+&
+{
+    left: 20%;
+top:-2rem ;
+
+}
+&:hover &__photo:not(:hover)
+{
+
+    transform: scale(.9);
+}
+}
+.composion__photo__p1
+{
+    left:-0;
+    top:-1rem ;
+}
+.composion__photo__p2
+{
+   right: 19%;
+    top:30px;
+   
+}
+.composion__photo__p3
+{
+    left:20%;
+   top:12rem;
+}

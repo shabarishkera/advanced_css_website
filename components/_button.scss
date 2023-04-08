@@ -51,3 +51,30 @@
   }
 
 }
+.btn-text
+{
+  
+  &:link,&:visited
+  {
+    font-size: 1.6rem;;
+    color:$color-primary;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary;
+    padding: 3px;
+  }
+  &:hover
+  {
+background-color: $color-primary;
+color: white;
+box-shadow:0 .5rem 1rem rgba(0,0,0,.5);
+    transform: translateY(-2px);
+
+  }
+  &:active
+  {
+
+    box-shadow:0 .5rem 1rem rgba(0,0,0,.5);
+    transform: translateY(0);
+  }
+}
