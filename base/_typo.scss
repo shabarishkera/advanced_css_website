@@ -8,11 +8,11 @@
     -webkit-background-clip:text;
     color: transparent;
     transition: all .3s;
+    text-align: center;
+    width: 100%;
    &:hover
    {
-
 transform: skewY(2deg);
-
    }
  }
  .heading-thirtiary
@@ -24,6 +24,5 @@ margin-bottom: 1.5rem;;
  .paragraph
  {
    font-size: 1.6rem;
-   margin-bottom: 3rem;
-   
+   margin-bottom: 3rem; 
  }
