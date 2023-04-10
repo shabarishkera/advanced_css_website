@@ -254,6 +254,8 @@ body {
 }
 
 .cart {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
   background-color: aquamarine;
   height: 350px;
   width: 200px;
@@ -261,8 +263,29 @@ body {
   justify-self: center;
   align-self: center;
   transition: all 0.5s;
+  font-size: 5rem;
+  height: 30rem;
+  position: relative;
 }
-.cart:hover {
+.cart:hover .cart__side-front {
+  transform: rotateY(180deg);
+}
+.cart:hover .cart__side-back {
+  transform: rotateY(0deg);
+}
+.cart__side {
+  background-color: orangered;
+  height: 30rem;
+  color: white;
+  width: 100%;
+  transition: all 0.3s;
+}
+.cart__side-front {
+  background-color: green;
+  width: 100%;
+}
+.cart__side-back {
+  background-color: red;
   transform: rotateY(180deg);
 }
 
