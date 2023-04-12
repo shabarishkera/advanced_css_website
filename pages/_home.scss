@@ -39,15 +39,21 @@ transform: skewY(8deg);
 }
 .row-tours
 {
-display: grid;
+display:flex;
 grid-template-columns: 1fr 1fr  1fr ;
 gap: 0rem;
-justify-content:space-evenly
-
+justify-content: center;
+flex-wrap: wrap;
 }
 .section-tours
 {
 background-color:wheat;
 padding-top: 30rem;
 margin-top: -10rem;
+}
+.section-stories
+{
+padding:2rem 0;
+background-color:lightgray;
+
 }

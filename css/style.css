@@ -96,7 +96,7 @@ body {
   margin-bottom: 3rem;
 }
 
-.util-center-text {
+.u-center-text {
   text-align: center;
 }
 
@@ -170,10 +170,11 @@ body {
 }
 
 .row-tours {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 0rem;
-  justify-content: space-evenly;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .section-tours {
@@ -182,9 +183,13 @@ body {
   margin-top: -10rem;
 }
 
+.section-stories {
+  padding: 2rem 0;
+  background-color: lightgray;
+}
+
 .btn:link, .btn:visited {
   text-decoration: none;
-  color: gray;
   padding: 1.5rem 4rem;
   display: inline-block;
   border-radius: 10rem;
@@ -197,6 +202,14 @@ body {
   animation: btnanime 1s ease-out 0.8s;
   animation-fill-mode: backwards;
   font-size: 1.7rem;
+  color: wheat;
+}
+.btn-green {
+  background-color: #55c57a;
+  animation: btnanime 1s ease-out 0.8s;
+  animation-fill-mode: backwards;
+  font-size: 1.7rem;
+  color: white;
 }
 .btn:hover {
   transform: translateY(-3px);
@@ -256,12 +269,12 @@ body {
 .cart {
   perspective: 150rem;
   -moz-perspective: 150rem;
-  height: 350px;
-  width: 250px;
+  width: 270px;
   position: relative;
   transition: all 2s;
   font-size: 5rem;
-  height: 35rem;
+  height: 47rem;
+  margin: 4rem;
   position: relative;
 }
 .cart:hover .cart__side-front {
@@ -271,7 +284,7 @@ body {
   transform: rotateY(0deg);
 }
 .cart__side {
-  height: 35rem;
+  height: 47rem;
   color: white;
   width: 100%;
   position: absolute;
@@ -279,7 +292,7 @@ body {
   transition: all 0.8s ease;
   border-radius: 3px;
   overflow: hidden;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.5);
 }
 .cart__side-front {
   width: 100%;
@@ -289,17 +302,22 @@ body {
   transform: rotateY(180deg);
   background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
 }
+.cart__details {
+  padding: 3rem;
+}
 .cart__details ul {
   list-style: none;
   width: 80%;
   margin: 0 auto;
-  color: gray;
+  color: black;
 }
 .cart__details ul li {
   text-align: center;
   font-size: 1.5rem;
   padding: 1rem;
-  border-bottom: 1px wheat solid;
+}
+.cart__details ul li:not(:last-child) {
+  border-bottom: 3px wheat solid;
 }
 .cart__heading {
   font-size: 2.8rem;
@@ -310,16 +328,80 @@ body {
   top: 16rem;
   right: 5rem;
   width: 70%;
+  box-decoration-break: clone;
+  background-clip: padding-box;
+  right: 0;
+}
+.cart__heading-1 {
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+}
+.cart__heading-2 {
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+}
+.cart__heading-3 {
+  background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
+}
+.cart__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center;
+}
+.cart__price-box {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+.cart__price-only {
+  font-size: 1.9rem;
+}
+.cart__price-value {
+  font-size: 6rem;
 }
 
 .cart___picture {
   background-size: cover;
   height: 23rem;
-  background-blend-mode: color;
+  background-blend-mode: screen;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 .cart___picture-1 {
   background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("../img/gal-14.jpeg");
+}
+.cart___picture-2 {
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("../img/back.jpg");
+}
+.cart___picture-3 {
+  background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url("../img/gal-4.jpeg");
+}
+
+.story {
+  width: 70vw;
+  height: 20rem;
+  margin: 0 auto;
+  box-shadow: 0 3px 10px black;
+  background-color: white;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 4rem;
+  transform: skewX(-12deg);
+}
+.story__shape {
+  width: 15rem;
+  height: 15rem;
+  float: left;
+  shape-outside: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  transform: skewX(12deg);
+}
+.story__img {
+  height: 100%;
+}
+.story__text {
+  transform: translate(12deg);
 }
 
 .logo-box {

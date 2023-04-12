@@ -3,7 +3,7 @@
   &:link,&:visited
   {
     text-decoration: none;
-    color:$graycol;
+   
     padding: 1.5rem 4rem;
     display: inline-block;
     border-radius: 10rem;
@@ -17,6 +17,15 @@
     animation: btnanime 1s ease-out .8s;
     animation-fill-mode: backwards;
     font-size: 1.7rem;
+    color: $gray-color1;
+  }
+  &-green
+  {
+    background-color:$color-primary;
+    animation: btnanime 1s ease-out .8s;
+    animation-fill-mode: backwards;
+    font-size: 1.7rem;
+    color:white;
   }
   &:hover{
   transform:translateY(-3px);
