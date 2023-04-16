@@ -1,19 +1,23 @@
 .feature-box {
   background-color: rgba(235, 227, 227, 0.8);
   font-size: 1.5rem;
-  padding: 2rem;
   text-align: center;
   box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.5);
   transition: all 0.2s;
   max-width: 300px;
   min-height: 350px;
   margin-top: -3rem;
+  overflow: hidden;
+  padding: 5rem;
 }
 .feature-box__icon {
   font-size: 5rem;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 131, 0.8)), url("../img/back.jpg");
   background-clip: text;
   color: transparent;
+}
+.feature-box__text {
+  vertical-align: middle;
 }
 .feature-box:hover {
   transform: translateY(-1.5rem) scale(110%);
@@ -167,6 +171,8 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2rem;
   transform: skewY(8deg);
+  justify-content: space-evenly;
+  position: relative;
 }
 
 .row-tours {
@@ -184,8 +190,9 @@ body {
 }
 
 .section-stories {
+  position: relative;
   padding: 2rem 0;
-  background-color: lightgray;
+  background-color: transparent;
 }
 
 .btn:link, .btn:visited {
@@ -359,6 +366,12 @@ body {
 .cart__price-value {
   font-size: 6rem;
 }
+.cart__side-back-2 {
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+}
+.cart__side-back-3 {
+  background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
+}
 
 .cart___picture {
   background-size: cover;
@@ -383,11 +396,13 @@ body {
   height: 20rem;
   margin: 0 auto;
   box-shadow: 0 3px 10px black;
-  background-color: white;
+  background-color: rgba(240, 240, 240, 0.4);
   border-radius: 4px;
   font-size: 16px;
   padding: 4rem;
   transform: skewX(-12deg);
+  display: block;
+  color: black;
 }
 .story__shape {
   width: 15rem;
@@ -396,12 +411,49 @@ body {
   shape-outside: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
   transform: skewX(12deg);
+  position: relative;
 }
 .story__img {
   height: 100%;
+  backface-visibility: hidden;
+  transform: scale(1.2);
+  transition: all 0.4s;
 }
 .story__text {
   transform: translate(12deg);
+}
+.story__caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  opacity: 0;
+  transition: all 0.4s;
+  color: white;
+}
+.story:hover .story__caption {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+.story:hover .story__img {
+  transform: scale(1);
+  filter: blur(1px) brightness(80%);
+}
+.story__heading {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-variant: small-caps;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  object-fit: cover;
+  filter: contrast(0.5) brightness(0.5);
 }
 
 .logo-box {

@@ -36,6 +36,9 @@ display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr;
 gap: 2rem;
 transform: skewY(8deg);
+justify-content: space-evenly;
+position: relative;
+
 }
 .row-tours
 {
@@ -53,7 +56,8 @@ margin-top: -10rem;
 }
 .section-stories
 {
+position: relative;
 padding:2rem 0;
-background-color:lightgray;
+background-color:transparent;
 
 }
