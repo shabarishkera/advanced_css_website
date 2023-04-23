@@ -1,0 +1,44 @@
+.footer
+{
+background-color: #333;
+padding: 3rem;
+font-size: 1.5rem;
+&__logo-box
+{
+text-align: center;
+
+}
+&__logo
+{
+height: 100%;
+//background-image:linear-gradient($color-primary-light,$color-primary-dark);
+
+background-blend-mode:overlay;
+}
+&__navigation
+{
+    border-radius: 13px;
+border: 2px solid $color-primary-light;
+padding: 20px;
+
+}
+
+&__list
+{
+    list-style: none;
+}
+
+&__item
+{
+display: inline-block;
+margin-right: 1rem;
+&:hover,&:focus
+{
+color: $color-primary-dark;
+
+
+}
+}
+
+
+}

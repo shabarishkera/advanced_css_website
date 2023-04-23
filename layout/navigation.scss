@@ -1,0 +1,147 @@
+.navigation
+{
+    
+&__checkbox
+{
+display:none;
+&:checked ~ .navigation__background
+{
+transform: scale(150);
+}
+&:checked ~ .navigation__nav
+{
+width:100%;
+opacity: 1;
+
+}
+&:checked + .navigation__button span
+{
+    background-color: transparent;
+&::after
+{
+    top:0;
+transform: rotate(45deg);
+
+}
+&::before
+{
+    top:0;
+transform: rotate(-45deg);
+
+}
+
+}
+
+
+}
+&__button
+{
+   text-align: center;
+background-color: white;
+height: 7rem;;
+width: 7rem;
+position:fixed;
+top:6rem;
+right: 6rem;
+z-index: 1666;
+border-radius: 50%;
+box-shadow: 1px 3px 10px ;
+
+
+}
+&__nav
+{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index:1000;
+    top:0;
+    left: 0;
+    opacity: 0;
+    width: 0;
+transition: opacity  .8s;
+}
+&__background
+{
+z-index: 555;
+height: 6rem;
+width: 6rem;
+border-radius: 50%;
+position:fixed;
+top:6.5rem;
+right: 6.5rem;
+background-image: radial-gradient($color-primary-light,$color-primary-dark);
+transition: all .8s ;
+
+}
+
+&__list
+{
+position: absolute;
+top:50%;
+left: 50%;
+transform: translate(-50%,-50%);
+list-style: none;
+
+}
+&__icon
+{
+    text-align: center;
+    transform: translateY(30px);
+    position: relative;
+&,&::before,&::after
+{
+   
+width: 3rem;
+height: 2px;
+background-color:#333 ;
+display: inline-block;
+margin-top: 2px;
+}
+&::before,&::after
+{
+   content: "";
+   position: absolute; 
+    left: 0;
+}
+&::before{
+    top: -1rem;
+}
+&::after{
+    top: 1rem;
+}
+}
+
+&__item
+{
+    z-index: 3000;
+    &:not(:last-child)
+    {
+margin-bottom: 3rem;
+
+    }
+}
+&__link
+{
+    text-align: center;
+    display: inline-block;
+    transition: all .4s;
+    &,&:link,&:visited
+    {
+font-size: 3rem;
+font-weight: bold;
+padding: 1rem 5rem;
+color: white;
+z-index: 5000;
+
+background-image:linear-gradient(50deg,transparent 0%,transparent 50% , white 50%);
+background-size:20%;
+background-repeat: no-repeat;
+    }
+    &:hover,&:active{
+        background-size: 160%;
+        color:#333;
+        transform: translateX(19px);
+    }
+}
+}
