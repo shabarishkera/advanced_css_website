@@ -32,7 +32,7 @@ text-align: center;
 
 .section-features
 {
-padding: 20rem;
+padding-top: 20rem;
 height: 95vh;
 background-image: linear-gradient(to right bottom,rgba(126, 213, 111, 0.8),rgba(40,180,131,0.8)),url('../img/back.jpg');
 background-size: cover;
@@ -45,13 +45,15 @@ transform: skew(0,-8deg) ;
 }
 .row-feature
 {
-
 display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr;
 gap: 2rem;
 transform: skewY(8deg);
-justify-content: space-evenly;
+justify-content: space-between;
 position: relative;
+overflow: hidden;
+width: 100%;
+
 
 }
 .row-tours
